@@ -55,7 +55,7 @@ const Fleet = () => {
                 <img  
                   alt={`${crane.name} - Grúa profesional`}
                   className="w-full h-full object-cover"
-                 src="https://images.unsplash.com/photo-1625990699662-35bbb7241a16" />
+                  src="https://images.unsplash.com/photo-1625990699662-35bbb7241a16" />
                 <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-500 to-sky-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {crane.capacity}
                 </div>

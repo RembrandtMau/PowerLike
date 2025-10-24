@@ -88,7 +88,7 @@ const Contact = () => {
             <img  
               alt="Equipo profesional de GrúasMax"
               className="w-full h-auto rounded-2xl shadow-2xl"
-             src="https://images.unsplash.com/photo-1672881397131-616179f73400" />
+              src="https://images.unsplash.com/photo-1672881397131-616179f73400" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent rounded-2xl"></div>
           </motion.div>
         </div>

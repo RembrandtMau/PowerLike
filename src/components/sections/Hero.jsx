@@ -13,7 +13,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-white"
           >
-            <h1 className="text-5xl lg:text-7xl font-black mb-6 leading-tight">
+            <h1 className="text-5xl lg:text-7xl font-black mb-6 leading-tight gradient-text">
               Movemos lo
               <span className="block gradient-text">Imposible</span>
             </h1>
@@ -41,7 +41,7 @@ const Hero = () => {
               <img  
                 alt="Grúa moderna trabajando en construcción"
                 className="w-full h-auto rounded-2xl shadow-2xl"
-               src="https://images.unsplash.com/photo-1692891321876-8019f757d91f" />
+                src="https://images.unsplash.com/photo-1692891321876-8019f757d91f" />
             </div>
             <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-blue-500/20 to-sky-500/20 rounded-2xl"></div>
           </motion.div>

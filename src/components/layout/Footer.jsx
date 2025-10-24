@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-sky-500 rounded-lg flex items-center justify-center">
                 <Truck className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold gradient-text">GrúasMax</span>
+              <span className="text-2xl font-bold gradient-text">Gruas PowerLike</span>
             </div>
             <p className="text-slate-400 leading-relaxed">
               Líderes en servicios de grúas y transporte de maquinaria pesada. 
@@ -34,7 +34,7 @@ const Footer = () => {
             <ul className="space-y-2 text-slate-400">
               <li><a href="tel:+15551234567" className="hover:text-blue-400 transition-colors">+1 (555) 123-4567</a></li>
               <li><a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">WhatsApp</a></li>
-              <li><a href="mailto:contacto@gruasmax.com" className="hover:text-blue-400 transition-colors">contacto@gruasmax.com</a></li>
+              <li><a href="mailto:contacto@gruasmax.com" className="hover:text-blue-400 transition-colors">contacto@gruaspowerlike.com</a></li>
               <li>Av. Industrial 123, Ciudad</li>
             </ul>
           </div>
