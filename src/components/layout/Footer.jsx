@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
-          <p>&copy; {new Date().getFullYear()} GrúasMax. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Gruas PowerLike. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

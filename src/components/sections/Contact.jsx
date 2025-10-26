@@ -54,7 +54,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-1 group-hover:gradient-text transition-colors">Email</h3>
-                <p className="text-slate-300 group-hover:text-white transition-colors">contacto@gruasmax.com</p>
+                <p className="text-slate-300 group-hover:text-white transition-colors">contacto@gruaspowerlike.com</p>
               </div>
             </a>
 

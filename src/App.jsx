@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>GrúasMax - Servicios Profesionales de Grúas y Transporte</title>
+        <title>Gruas PowerLike - Servicios Profesionales de Grúas y Transporte</title>
         <meta name="description" content="Empresa líder en servicios de grúas, transporte de maquinaria pesada y montaje industrial. Disponibles 24/7 con la mejor tecnología y personal certificado." />
       </Helmet>
 
