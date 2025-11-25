@@ -1,33 +1,23 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/layout/Header';
-import Hero from '@/components/sections/Hero';
-import Services from '@/components/sections/Services';
-import Fleet from '@/components/sections/Fleet';
-import Contact from '@/components/sections/Contact';
-import Footer from '@/components/layout/Footer';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import About from './components/About';
+import Gallery from './components/Gallery';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
-      <Helmet>
-        <title>Gruas PowerLike - Servicios Profesionales de Grúas y Transporte</title>
-        <meta name="description" content="Empresa líder en servicios de grúas, transporte de maquinaria pesada y montaje industrial. Disponibles 24/7 con la mejor tecnología y personal certificado." />
-      </Helmet>
-
-      <div className="min-h-screen bg-slate-50">
-        <Header />
-        <main>
-          <Hero />
-          <Services />
-          <Fleet />
-          <Contact />
-        </main>
-        <Footer />
-        <Toaster />
-      </div>
-    </>
+    <div className="min-h-screen bg-slate-50">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <About />
+        <Gallery />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
