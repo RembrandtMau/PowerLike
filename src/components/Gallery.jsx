@@ -7,10 +7,21 @@ const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
 
     useEffect(() => {
-        // Dynamically import all JPG images from the assets/images directory
-        const imageModules = import.meta.glob('../assets/images/*.JPG', { eager: true, query: '?url', import: 'default' });
-        const imageList = Object.values(imageModules);
-        setImages(imageList);
+        // Dynamically import all images from the assets/images directory
+        const imageModules = import.meta.glob('../assets/images/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp,WEBP}', { eager: true, query: '?url', import: 'default' });
+
+        // Filter out the logo and any other unwanted files
+        const filteredImages = Object.entries(imageModules)
+            .filter(([path, url]) => {
+                // Exclude the specific logo file and any file containing "logo" (case insensitive)
+                const fileName = path.split('/').pop().toLowerCase();
+                return !fileName.includes('gruas like_page-0001') && !fileName.includes('logo');
+            })
+            .map(([_, url]) => url);
+
+        // Use a Set to filter out duplicate URLs
+        const uniqueImages = [...new Set(filteredImages)];
+        setImages(uniqueImages);
     }, []);
 
     return (

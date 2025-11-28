@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Phone } from 'lucide-react';
+import ContactModal from './ContactModal';
 // Importing an image for background - assuming the first one is suitable or we use a placeholder if not
 // We will use a direct path string for now as we don't have the import set up for all images yet
 // Ideally we should import it, but for dynamic usage we might need to handle it differently.
 // Let's try to import one specific image.
-import heroBg from '../assets/images/1f9918ae-6efc-462d-b0fe-f6e09cd25b9d.JPG';
+import heroBg from '../assets/images/5a4264af-1466-4ee5-9e11-869bd5d59bc8.JPG';
 
 const Hero = () => {
+    const [isContactOpen, setIsContactOpen] = useState(false);
+
     return (
         <section id="hero" className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
             {/* Background Image with Overlay */}
@@ -38,10 +41,13 @@ const Hero = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <a href="#contact" className="btn-primary flex items-center justify-center gap-2">
+                            <button
+                                onClick={() => setIsContactOpen(true)}
+                                className="btn-primary flex items-center justify-center gap-2"
+                            >
                                 Solicitar Servicio
                                 <ArrowRight size={20} />
-                            </a>
+                            </button>
                             <a href="tel:+523320150955" className="btn-secondary flex items-center justify-center gap-2">
                                 <Phone size={20} />
                                 <span>Llamar Ahora</span>
@@ -66,6 +72,8 @@ const Hero = () => {
                     </motion.div>
                 </div>
             </div>
+
+            <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
         </section>
     );
 };

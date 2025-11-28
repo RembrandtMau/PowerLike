@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Truck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../assets/images/GRUAS LIKE_page-0001.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,18 +20,30 @@ const Navbar = () => {
         { name: 'Servicios', href: '#services' },
         { name: 'Nosotros', href: '#about' },
         { name: 'Galería', href: '#gallery' },
-        { name: 'Contacto', href: '#footer' },
     ];
 
+    const handleScroll = (e, href) => {
+        e.preventDefault();
+        const targetId = href.replace('#', '');
+        const element = document.getElementById(targetId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setIsOpen(false);
+        }
+    };
+
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'glass shadow-sm py-3' : 'bg-transparent py-5'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'}`}>
             <div className="container-custom flex justify-between items-center">
-                <a href="#" className="flex items-center gap-2 group">
-                    <div className="bg-blue-600 p-2 rounded-lg text-white transform group-hover:rotate-3 transition-transform">
-                        <Truck size={24} />
-                    </div>
-                    <span className={`text-2xl font-bold tracking-tight ${scrolled ? 'text-slate-900' : 'text-white'}`}>
-                        Power<span className="text-blue-600">Like</span>
+                {/* Logo */}
+                <a
+                    href="#hero"
+                    onClick={(e) => handleScroll(e, '#hero')}
+                    className="flex items-center gap-2"
+                >
+                    <img src={logo} alt="PowerLike Logo" className="h-12 object-contain" />
+                    <span className={`text-2xl font-bold tracking-tight font-heading ${scrolled ? 'text-slate-900' : 'text-white'}`}>
+                        Power<span className="text-blue-500">Like</span>
                     </span>
                 </a>
 
@@ -40,6 +53,7 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
+                            onClick={(e) => handleScroll(e, link.href)}
                             className={`font-medium transition-colors hover:text-blue-600 ${scrolled ? 'text-slate-600' : 'text-white/90 hover:text-white'}`}
                         >
                             {link.name}
@@ -75,7 +89,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     className="text-lg font-medium text-slate-700 hover:text-blue-600"
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={(e) => handleScroll(e, link.href)}
                                 >
                                     {link.name}
                                 </a>
